@@ -9,7 +9,7 @@ contract SaysGM is CallbackConsumer {
 
     function sayGM() public {
         _requestCompute(
-            "hello-world",
+            "metalab001",
             bytes("Good morning!"),
             1, // redundancy
             address(0), // paymentToken

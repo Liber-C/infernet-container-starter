@@ -6,7 +6,7 @@ build-container:
 	$(MAKE) -C ./projects/$(project)/container build index_url=$(index_url)
 
 remove-containers:
-	docker compose -f deploy/docker-compose.yaml down || true
+	docker-compose -f deploy/docker-compose.yaml down || true
 	docker stop $(project) anvil-node && docker rm $(project) anvil-node || true
 
 build-multiplatform:
@@ -14,17 +14,17 @@ build-multiplatform:
 
 deploy-container: stop-container
 	cp ./projects/$(project)/container/config.json deploy/config.json
-	docker compose -f deploy/docker-compose.yaml up -d
+	docker-compose -f deploy/docker-compose.yaml up -d
 	docker logs infernet-node -f
 
 stop-container:
-	docker compose -f deploy/docker-compose.yaml kill || true
-	docker compose -f deploy/docker-compose.yaml rm -f || true
+	docker-compose -f deploy/docker-compose.yaml kill || true
+	docker-compose -f deploy/docker-compose.yaml rm -f || true
 	docker kill $(project) || true
 	docker rm $(project) || true
 
 watch-logs:
-	docker compose -f deploy/docker-compose.yaml logs -f
+	docker-compose -f deploy/docker-compose.yaml logs -f
 
 deploy-contracts:
 	$(MAKE) -C ./projects/$(project)/contracts deploy
