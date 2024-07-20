@@ -6,7 +6,7 @@
     "chain": {
         "enabled": true,
         "trail_head_blocks": 0,
-        "rpc_url": "https://base-mainnet.g.alchemy.com/v2/p2DmtMNouM1IenZukWey5NWzKbv06AkA",
+        "rpc_url": "https://base-mainnet.g.alchemy.com/v2/gWSZ-6RItNYIRrmLTKANhx_FKQNdv9GM",
         "registry_address": "0x3B1554f346DFe5c482Bb4BA31b880c1C18412170",
         "wallet": {
             "max_gas_limit": 4000000,
@@ -24,8 +24,8 @@
     },
     "forward_stats": true,
     "snapshot_sync": {
-        "sleep": 3,
-        "batch_size": 100
+        "sleep": 5,
+        "batch_size": 50
     },
     "containers": [
         {
