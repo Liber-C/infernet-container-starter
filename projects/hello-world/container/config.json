@@ -29,7 +29,7 @@
     },
     "containers": [
         {
-            "id": "metalab001",
+            "id": "metalab005",
             "image": "ritualnetwork/hello-world-infernet:latest",
             "external": true,
             "port": "3000",
